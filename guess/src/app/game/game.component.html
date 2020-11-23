@@ -1,0 +1,11 @@
+<img src="{{data.img_url}}">
+<form [formGroup]="form" (ngSubmit)="checkAnswer()">
+
+    <select formControlName="names" [(ngModel)]="name">
+       <option *ngFor="let name of data.names" [value]="name">
+        {{ name }}
+      </option>
+    </select>
+    <button type="submit">Answer</button>
+ </form>
+ <button (click)="restart()">Restart</button>

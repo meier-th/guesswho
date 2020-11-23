@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <select formControlName="difficulties" [(ngModel)]="diff">
+       <option *ngFor="let difficulty of difficulties" [value]="difficulty">
+        {{ difficulty }}
+      </option>
+    </select>
+ 
+    <button type="submit">Play</button>
+ </form>
